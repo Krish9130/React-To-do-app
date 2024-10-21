@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo "Node js installed"
+      - echo "node -v"
+    
+  pre_build:
+    commands:
+      - echo "installing the project"
+      - npm install
+  build:
+    commands:
+      - echo "building the project"
+      - npm run build
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: build
