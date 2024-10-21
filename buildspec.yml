@@ -6,7 +6,7 @@ phases:
       nodejs: 14
     commands:
       - echo "Node js installed"
-      - echo "node -v"
+      - echo "$(node -v)"
     
   pre_build:
     commands:
