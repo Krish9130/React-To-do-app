@@ -16,7 +16,7 @@ phases:
     commands:
       - echo "building the project"
       - npm run build
-      - ls
+      - ls -a
       - ls build
 
 artifacts:
