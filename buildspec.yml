@@ -16,8 +16,11 @@ phases:
     commands:
       - echo "building the project"
       - npm run build
+      - ls
+      - ls build
 
 artifacts:
   files:
-    - "**/*"
-  base-directory: build
+    - build/**/*
+    - appspec.yml
+  
