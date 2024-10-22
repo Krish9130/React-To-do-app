@@ -1,7 +1,7 @@
 version: 0.2
 os: linux
 files:
-  - source: /build/
+  - source: /build/**
     destination: /var/www/html/
   - source: scripts/
     destination: /home/ubuntu/
@@ -11,6 +11,7 @@ permissions:
     pattern: "**"
     owner: root
     mode: "755"
+    
 hooks:
   #ApplicationStop:
     #- location: scripts/stop_server.sh
