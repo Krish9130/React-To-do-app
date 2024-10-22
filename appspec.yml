@@ -1,10 +1,10 @@
 version: 0.2
 os: linux
 files:
-  - source: build/
+  - source: /build
     destination: /opt/react
-  - source: scripts/
-    destination: /home/ubuntu/
+  - source: /scripts
+    destination: /home/ubuntu
 
 permissions:
   - object: /home/ubuntu/start_server.sh
