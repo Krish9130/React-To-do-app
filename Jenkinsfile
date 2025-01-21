@@ -25,9 +25,9 @@ pipeline {
                     transfers: [sshTransfer(
                         sourceFiles: 'build/**',
                         removePrefix: 'build',
-                        remoteDirectory: '/var/www/html/',
+                        remoteDirectory: 'react/',
                         execCommand: '''
-                            sudo mv /home/ubuntu/var/www/html/* /var/www/html/ && sudo service nginx reload
+                            sudo mv /home/ubuntu/react/* /var/www/html/ && sudo service nginx reload
                         '''
                     )],
                     usePromotionTimestamp: false,
