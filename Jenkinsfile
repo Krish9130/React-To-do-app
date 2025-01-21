@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                git url: "https://github.com/kabirbaidhya/react-todo-app.git", branch: "master"
+                git branch: 'main', credentialsId: 'git', url: 'https://github.com/Krish9130/React-To-do-app.git'
+                sh "ls"
                 sh "npm install"
                 sh "npm run build"
             }
@@ -17,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshPublisher(publishers: [sshPublisherDesc(
-                    configName: 'React-app2', 
+                    configName: 'stackhawk-test-react-app', 
                     transfers: [sshTransfer(
                         sourceFiles: 'build/**',
                         removePrefix: 'build',
