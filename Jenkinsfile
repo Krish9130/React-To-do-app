@@ -53,7 +53,7 @@ pipeline {
                   --name hawkscan-container \
                   stackhawk/hawkscan
                 """
-                sh "docker stop hawkscan-container"
+                //sh "docker stop hawkscan-container"
                 sh "docker rm hawkscan-container" 
             }
           }
