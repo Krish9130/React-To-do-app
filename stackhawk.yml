@@ -1,7 +1,8 @@
 # -- stackhawk configuration for React-app --
 app:
   # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: 5321c48d-63a0-4394-b64b-416df5c4bf2e # (required)
+  applicationId: bce99dc6-9884-4081-a8e1-bb31dc38897d
+  # 5321c48d-63a0-4394-b64b-416df5c4bf2e # (required)
   # -- The environment for the applicationId defined in the StackHawk platform. --
   env: Development # (required)
   # -- The url of your application to scan --
