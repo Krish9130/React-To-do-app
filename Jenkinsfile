@@ -1,5 +1,8 @@
 pipeline {
-    agent any 
+    agent any
+    environment {
+        HAWK_API_KEY = credentials("stackhawk-api-key")
+    }
     triggers {
         pollSCM('H/5 * * * *')
     }
@@ -41,9 +44,6 @@ pipeline {
           }
         }
         stage("Run HawkScan Test") {
-          environment {
-            HAWK_API_KEY = credentials("stackhawk-api-key")
-          }
           steps {
             sh "docker run -v ${WORKSPACE}:/hawk:rw \
                 -t \
