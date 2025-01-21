@@ -46,15 +46,16 @@ pipeline {
         stage("Run HawkScan Test") {
           steps {
             withEnv(["API_KEY=${HAWK_API_KEY}", "NO_COLOR=true"]) {
-            sh """
-              docker run -v ${WORKSPACE}:/hawk:rw -t \
-              -e API_KEY=${API_KEY} \
-              -e NO_COLOR=${NO_COLOR} \
-              --name hawkscan-container \
-              stackhawk/hawkscan
-            """
-            sh "docker stop hawkscan-container"
-            sh "docker rm hawkscan-container"
+                sh """
+                  docker run -v ${WORKSPACE}:/hawk:rw -t \
+                  -e API_KEY=${API_KEY} \
+                  -e NO_COLOR=${NO_COLOR} \
+                  --name hawkscan-container \
+                  stackhawk/hawkscan
+                """
+                sh "docker stop hawkscan-container"
+                sh "docker rm hawkscan-container" 
+            }
           }
         }
         stage('Send Email Notification') {
