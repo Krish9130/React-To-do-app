@@ -47,3 +47,21 @@ $ git checkout <step-number>    # eg: git checkout step-1
 * [step-13](https://github.com/kabirbaidhya/react-todo-app/commits/step-13) - Refactor code and design improvements.
 * [step-14](https://github.com/kabirbaidhya/react-todo-app/commits/step-14) - Refactor and separate UI & stateful components.
 * [step-15](https://github.com/kabirbaidhya/react-todo-app/commits/step-15) - Finalization of TodoApp.
+
+
+index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/wrappers/App';
+
+// Add bootstrap
+import 'bootstrap/dist/css/bootstrap.css';
+
+// Add our style
+import './assets/style/index.css';
+
+ReactDOM.render(
+    <App/>,
+    document.getElementById('root')
+);
