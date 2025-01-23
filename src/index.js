@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 // Add our style
 import './assets/style/index.css';
 
-const HealthCheck = () => {
+/*const HealthCheck = () => {
   const [isHealthy, setIsHealthy] = useState(null);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const HealthCheck = () => {
 
   return <App />;
 };
-
+*/
 
 ReactDOM.render(
     <App/>,
