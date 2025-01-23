@@ -3,9 +3,9 @@ pipeline {
     environment {
         HAWK_API_KEY = credentials("stackhawk-api-key")
     }
-    triggers {
-        pollSCM('H/5 * * * *')
-    }
+    //triggers {
+        //pollSCM('H/5 * * * *')
+    //}
     
     tools {nodejs "Nodejs"}
     
